@@ -69,9 +69,48 @@ Odabrana slika se otvara u prikazu s detaljima.
 ### Actual Result
 Umjesto prikaza slike, otvara se stranica s porukom **"404: Page Missing"** – prazna stranica bez sadržaja. 
 
+---
 
+## Bug #5 – Nema jasne opcije za povratak na početnu stranicu s profila
 
+**Type:** UX Bug  
+**Severity:** Medium  
+**Environment:** Chrome, Windows 10  
 
+### Steps to Reproduce
+1. Prijavi se u aplikaciju  
+2. Otvori svoj profil i pogledaj svoje albume  
+3. Pokušaj se vratiti na početnu stranicu s prikazom svih albuma  
+
+### Expected Result
+Na profilu bi trebala postojati jasna opcija (npr. gumb “Home” ili logo aplikacije) koja korisnika odmah vraća na početnu stranicu.  
+
+### Actual Result
+Korisnik nema izravnu opciju za povratak.  
+Jedini način je otvoriti **padajući izbornik** i zatim ga zatvoriti, nakon čega se tek tada prikaže početna stranica. 
+
+---
+
+## Bug #6 – Albumi se na početnoj stranici prikazuju kao pojedinačne slike
+
+**Type:** Functional / UX Bug  
+**Severity:** Medium  
+**Environment:** Chrome, Windows 10  
+
+### Steps to Reproduce
+1. Otvori početnu stranicu aplikacije  
+2. Pregledaj prikaz albuma koji se nalaze na stranici  
+
+### Expected Result
+Na početnoj stranici trebali bi se prikazivati samo albumi, svaki s naslovnom slikom i nazivom.  
+Kada korisnik klikne na album, tada se trebaju prikazati pojedinačne slike unutar tog albuma.  
+
+### Actual Result
+Na početnoj stranici prikazuju se i naslovna slika albuma i slike unutar albuma kao da su sve zasebne fotografije.  
+Time se gubi struktura albuma i korisnik ne može razlikovati gdje počinje novi album. (screenshots/bug_albumCover_Photos.png)
+
+---
+---
 
 
 ## 💡 Suggestions / Improvements
@@ -82,5 +121,23 @@ Umjesto prikaza slike, otvara se stranica s porukom **"404: Page Missing"** – 
 **Environment:** Chrome, Windows 10  
 
 #### Description
-Trenutno je moguće pretraživati samo nazive slika.  
+Trenutno je moguće pretraživati samo nazive slika.
+
+#### Expected Benefit
+
 Pretraživanje po korisnicima omogućilo bi lakše pronalaženje slika određenog autora i poboljšalo korisničko iskustvo.
+---
+### Suggestion #2 – Omogućiti "Drag & Drop" upload slika
+
+**Type:** UX Improvement  
+**Priority:** Medium  
+**Environment:** Chrome, Windows 10  
+
+#### Description
+Trenutno se slike mogu dodavati samo putem standardne opcije **"Browse files"**.  
+Predlaže se dodavanje mogućnosti **povlačenja i ispuštanja (drag & drop)** slika unutar područja za upload.  
+
+#### Expected Benefit
+Korisnicima bi se omogućilo brže i intuitivnije dodavanje fotografija, što je uobičajeno ponašanje u modernim web aplikacijama.  
+Opcija *drag & drop* trebala bi biti dodatak postojećem načinu učitavanja putem dijaloga za datoteke, a ne zamjena.
+
