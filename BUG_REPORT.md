@@ -71,23 +71,23 @@ Umjesto prikaza slike, otvara se stranica s porukom **"404: Page Missing"** – 
 
 ---
 
-## Bug #5 – Nema jasne opcije za povratak na početnu stranicu s profila
+## Bug #5 – Klik na menu unutar profila vraća korisnika na početnu stranicu
 
-**Type:** UX Bug  
+**Type:** Functional Bug 
 **Severity:** Medium  
 **Environment:** Chrome, Windows 10  
 
 ### Steps to Reproduce
 1. Prijavi se u aplikaciju  
-2. Otvori svoj profil i pogledaj svoje albume  
-3. Pokušaj se vratiti na početnu stranicu s prikazom svih albuma  
+2. Otvori svoj profil  
+3. Otvori padajući izbornik
+4. Klikni menu 
 
 ### Expected Result
-Na profilu bi trebala postojati jasna opcija (npr. gumb “Home” ili logo aplikacije) koja korisnika odmah vraća na početnu stranicu.  
+Otvara se menu bez povratka na početnu stranicu.  
 
 ### Actual Result
-Korisnik nema izravnu opciju za povratak.  
-Jedini način je otvoriti **padajući izbornik** i zatim ga zatvoriti, nakon čega se tek tada prikaže početna stranica. 
+Nakon klika menu se otvara i vraća korisnika na početnu stranicu. 
 
 ---
 
@@ -108,6 +108,64 @@ Kada korisnik klikne na album, tada se trebaju prikazati pojedinačne slike unut
 ### Actual Result
 Na početnoj stranici prikazuju se i naslovna slika albuma i slike unutar albuma kao da su sve zasebne fotografije.  
 Time se gubi struktura albuma i korisnik ne može razlikovati gdje počinje novi album. (screenshots/bug_albumCover_Photos.png)
+
+---
+## Bug #7 – Broj slika u albumu se ne ažurira odmah nakon brisanja
+
+**Type:** Functional Bug
+**Severity:** Low
+**Environment:** Chrome, Windows 10
+
+### Steps to Reproduce
+1. Otvori album koji sadrži više slika
+2. Obriši jednu sliku iz albuma
+3. Promatraj prikaz broja slika u albumu bez osvježavanja stranice
+
+### Expected Result
+Nakon što korisnik obriše sliku, broj slika prikazan uz album trebao bi se odmah ažurirati i prikazivati točan broj slika.
+
+### Actual Result
+Nakon brisanja slike, broj slika u albumu se ne ažurira odmah.
+Prikazuje se stari broj (npr. 2 slike) sve dok se stranica ručno ne osvježi, nakon čega se prikazuje točan broj (1 slika).
+
+---
+
+## Bug #8 – Ručno uneseni naziv slike se prepisuje imenom datoteke nakon uploada
+
+**Type:** Functional / UX Bug
+**Severity:** Medium
+**Environment:** Chrome, Windows 10
+
+### Steps to Reproduce
+1. Otvori formu za dodavanje nove slike u aplikaciji.​
+2. U polje "Photo Name" upiši vlastiti naziv slike (npr. "forest") prije odabira datoteke.​
+3. Odaberi i uploadaj datoteku s računala čiji je naziv drugačiji (npr. "IMG_1234.jpg").​
+4. Promatraj vrijednost polja "Photo Name" nakon završetka uploada.​
+
+Expected Result
+Ručno uneseni naziv treba ostati nepromijenjen nakon odabira i uploada datoteke, osim ako aplikacija prije uploada eksplicitno upozori da će naziv biti prepisan imenom datoteke.​
+
+Actual Result
+Nakon uploada, vrijednost polja automatski se prepisuje na naziv datoteke s računala (npr. s "forest" na "IMG_1234"), čime se gubi korisnički unos bez jasnog upozorenja ili kontrole.​
+
+---
+
+## Bug #9 – Početna poruka je preopćenita i neusklađena s tonom proizvoda
+
+**Type:** UI/Content Bug
+**Severity:** Low
+**Environment:** Chrome, Windows 10
+
+### Steps to Reproduce
+1. Otvori početnu stranicu aplikacije.  
+2. Uoči hero poruku: "We are celebrating the vastness of life."
+
+### Expected Result
+Poruka treba biti gramatički ispravna, jasnija i prirodnija, primjerice:  
+"We celebrate the vastness of life."
+
+### Actual Result
+Trenutna poruka "We are celebrating the vastness of life" zvuči neprirodno i nije u skladu s tonom aplikacije.
 
 ---
 ---
@@ -140,4 +198,38 @@ Predlaže se dodavanje mogućnosti **povlačenja i ispuštanja (drag & drop)** s
 #### Expected Benefit
 Korisnicima bi se omogućilo brže i intuitivnije dodavanje fotografija, što je uobičajeno ponašanje u modernim web aplikacijama.  
 Opcija *drag & drop* trebala bi biti dodatak postojećem načinu učitavanja putem dijaloga za datoteke, a ne zamjena.
+
+---
+
+### Suggestion #3 - Unaprijediti upload fotografije 
+
+**Type:** Functional Improvement  
+**Priority:** Medium  
+**Environment:** Chrome, Windows 10  
+
+#### Description
+Trenutno se naziv slika prilikom uploada automatski dodjeli prema nazivu datoteke bez obzira želi li korisnik tu mogućnost.
+Ako je polje "Photo Name" već promijenjeno od strane korisnika, ne prepisivati ga nakon uploada; popunjavati ga imenom datoteke samo kada je prazno ili nepromijenjeno.​
+Dodati toggle "Koristi naziv datoteke" koji kad je uključen sinkronizira naslov s file.name, a kad je isključen zadržava korisnički unos.​
+Jasno validirati i prikazati informativnu poruku ako će aplikacija prepisati naslov, ili primijeniti pravilo da se ime datoteke koristi samo za interni identifikator, dok “Naziv” ostaje korisnički atribut.​
+
+#### Expected Benefit
+Korisnik ne mora ponovno unositi naziv slike ukoliko je prije uploada već to učinio.
+
+---
+### Suggestion #4 – Zamijeniti beskonačno skrolanje numeracijom stranica (pagination)
+
+**Type:** UX Improvement  
+**Priority:** Medium  
+**Environment:** Chrome, Windows 10  
+
+#### Description
+Trenutno aplikacija koristi beskonačno skrolanje za prikaz slika.  
+Predlaže se uvođenje paginacije, prikaz ograničenog broja slika po stranici (npr. 20), uz mogućnost prelaska na sljedeću / prethodnu stranicu.
+
+#### Expected Benefit
+- Lakše snalaženje i povratak na prethodne slike  
+- Brže učitavanje sadržaja  
+- Jasnija struktura galerije i bolja kontrola nad pregledom
+
 
