@@ -34,7 +34,7 @@ Klikom na gumb otvara se galerija i tek tada omogućuje korisniku listanje.
 
 ---
 
-## Bug #3 – Blog name link u podnožju ne reagira
+## ♦️ Bug #3 – Blog name link u podnožju ne reagira
 **Type** Frontend Bug
 **Severity:** Medium
 **Environment:** Chrome, Windows 10  
@@ -52,7 +52,7 @@ Blog name je prazan link i ne vodi nigdje prilikom klika (screenshots/bug_blog_n
 
 ---
 
-## Bug #4 – Otvaranje slike iz vlastitog albuma vodi na 404 stranicu
+## ♦️ Bug #4 – Otvaranje slike iz vlastitog albuma vodi na 404 stranicu
 
 **Type:** Functional Bug  
 **Severity:** High  
@@ -71,7 +71,7 @@ Umjesto prikaza slike, otvara se stranica s porukom **"404: Page Missing"** – 
 
 ---
 
-## Bug #5 – Klik na menu unutar profila vraća korisnika na početnu stranicu
+## ♦️ Bug #5 – Klik na menu unutar profila vraća korisnika na početnu stranicu
 
 **Type:** Functional Bug 
 **Severity:** Medium  
@@ -91,7 +91,7 @@ Nakon klika menu se otvara i vraća korisnika na početnu stranicu.
 
 ---
 
-## Bug #6 – Albumi se na početnoj stranici prikazuju kao pojedinačne slike
+## ♦️ Bug #6 – Albumi se na početnoj stranici prikazuju kao pojedinačne slike
 
 **Type:** Functional / UX Bug  
 **Severity:** Medium  
@@ -110,7 +110,7 @@ Na početnoj stranici prikazuju se i naslovna slika albuma i slike unutar albuma
 Time se gubi struktura albuma i korisnik ne može razlikovati gdje počinje novi album. (screenshots/bug_albumCover_Photos.png)
 
 ---
-## Bug #7 – Broj slika u albumu se ne ažurira odmah nakon brisanja
+## ♦️ Bug #7 – Broj slika u albumu se ne ažurira odmah nakon brisanja
 
 **Type:** Functional Bug
 **Severity:** Low
@@ -130,7 +130,7 @@ Prikazuje se stari broj (npr. 2 slike) sve dok se stranica ručno ne osvježi, n
 
 ---
 
-## Bug #8 – Ručno uneseni naziv slike se prepisuje imenom datoteke nakon uploada
+## ♦️ Bug #8 – Ručno uneseni naziv slike se prepisuje imenom datoteke nakon uploada
 
 **Type:** Functional / UX Bug
 **Severity:** Medium
@@ -150,7 +150,7 @@ Nakon uploada, vrijednost polja automatski se prepisuje na naziv datoteke s rač
 
 ---
 
-## Bug #9 – Početna poruka je preopćenita i neusklađena s tonom proizvoda
+## ♦️ Bug #9 – Početna poruka je preopćenita i neusklađena s tonom proizvoda
 
 **Type:** UI/Content Bug
 **Severity:** Low
@@ -169,7 +169,7 @@ Trenutna poruka "We are celebrating the vastness of life" zvuči neprirodno i ni
 
 ---
 
-## Bug #10 - Nije moguće postaviti novu lozinku.
+## ♦️ Bug #10 - Nije moguće postaviti novu lozinku.
 
 **Type:** Functional Bug
 **Severity:** High
@@ -192,7 +192,7 @@ Resetiranje lozinke nije moguće dovršiti.  (screenshots/bug_newPassword)
 
 ---
 
-## Bug #11 – Social login opcije ne rade 
+## ♦️ Bug #11 – Social login opcije ne rade 
 
 **Type:** Functional Bug  
 **Severity:** High  
@@ -213,7 +213,7 @@ Prijava putem društvenih mreža nije moguća.
 
 ---
 
-## Bug #12 – Aplikacija prihvaća nevažeće e-mail adrese pri registraciji
+## ♦️ Bug #12 – Aplikacija prihvaća nevažeće e-mail adrese pri registraciji
 
 **Type:** Validation / Functional Bug  
 **Severity:** High  
