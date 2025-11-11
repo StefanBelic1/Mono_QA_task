@@ -1,300 +1,373 @@
-# 🐞 BUG REPORT – Photo Gallery 
+# 🐞 BUG REPORT – Photo Gallery  
 
-## ♦️ Bug #1 – Nejasna ikona padajućeg izbornika
-**Type:** UI Bug
+---
+
+## ♦️ Bug #1 – Unclear Dropdown Menu Icon  
+
+**Type:** UI Bug  
 **Severity:** Low  
-**Environment:** Chrome, Windows 10  
+**Environment:** Chrome, Android 14, Windows 10  
 
-### Steps to Reproduce
-1. Otvori početnu stranicu  
-2. Pogledaj ikonu padajućeg izbornika (screenshots/bug1.png) 
+### Steps to Reproduce  
+1. Open the homepage.  
+2. Observe the dropdown menu icon (screenshots/bug1.png).  
 
-### Expected Result
-Padajući izbornik bi trebao biti predstavljen poznatom ikonom poput klasične "hamburger" ikone ili strelice prema dolje (screenshots/hamburger.png)
+### Expected Result  
+The dropdown menu should use a recognizable icon, such as a classic “hamburger” icon or a downward arrow (screenshots/hamburger.png).  
 
-### Actual Result
-Gumb padajućeg izbornika nije jasan, izgleda kao da predstavlja način biranja između tamne i svijetle teme.
-
----
-
-## ♦️ Bug #2 – Nepotreban dodatni korak za pregled galerija
-**Type:** UX Bug
-**Severity:** Low
-**Environment:** Chrome, Windows 10  
-
-### Steps to Reproduce
-1. Otvori početnu stranicu
-2. Klikni ikonu koja prikazuje galeriju (screenshots/bug2Gumb)
-
-### Expected Result
-Korisnik bi trebao moći odmah listati prema dolje do galerije bez dodatnog klika.
-
-### Actual Result
-Klikom na gumb otvara se galerija i tek tada omogućuje korisniku listanje.
+### Actual Result  
+The dropdown button is unclear and looks like a theme selector (dark/light mode).  
 
 ---
 
-## ♦️ Bug #3 – Blog name link u podnožju ne reagira
-**Type** Frontend Bug
-**Severity:** Medium
-**Environment:** Chrome, Windows 10  
+## ♦️ Bug #2 – Blog Name Link in Footer Is Not Clickable  
 
-### Steps to Reproduce
-1. Otvori početnu stranicu
-2. Listaj prema dolje
-3. Klikni na "Blog name" 
+**Type:** Frontend Bug  
+**Severity:** Medium  
+**Environment:** Chrome, Windows 10, Android 14  
 
-### Expected Result
-Copyright ima pravi naziv od koga je postavljen i klikom na ime vodi na njihovu stranicu.
+### Steps to Reproduce  
+1. Open the homepage.  
+2. Scroll to the bottom.  
+3. Click on “Blog name.”  
 
-### Actual Result
-Blog name je prazan link i ne vodi nigdje prilikom klika (screenshots/bug_blog_name.png) 
+### Expected Result  
+The copyright text should include the correct name and link to the relevant website.  
+
+### Actual Result  
+“Blog name” is an empty link and does not redirect anywhere when clicked. (screenshots/bug_blog_name.png)  
 
 ---
 
-## ♦️ Bug #4 – Otvaranje slike iz vlastitog albuma vodi na 404 stranicu
+## ♦️ Bug #3 – Opening Image from User Album Leads to 404 Page  
 
 **Type:** Functional Bug  
 **Severity:** High  
-**Environment:** Chrome, Windows 10  
+**Environment:** Chrome, Windows 10, Android 14  
 
-### Steps to Reproduce
-1. Prijavi se u aplikaciju  
-2. Otvori Moj album : "TestAlbum"
-3. Klikni na bilo koju sliku unutar svog albuma  
+### Steps to Reproduce  
+1. Log in to the application.  
+2. Open **My Album** (e.g., "TestAlbum").  
+3. Click on any image within your album.  
 
-### Expected Result
-Odabrana slika se otvara u prikazu s detaljima.  
+### Expected Result  
+The selected image should open in a detailed view.  
 
-### Actual Result
-Umjesto prikaza slike, otvara se stranica s porukom **"404: Page Missing"** – prazna stranica bez sadržaja. 
+### Actual Result  
+Instead of displaying the image, a **“404: Page Missing”** page appears. (screenshots/bug3_404.png)  
 
 ---
 
-## ♦️ Bug #5 – Klik na menu unutar profila vraća korisnika na početnu stranicu
+## ♦️ Bug #4 – Clicking “Menu” Inside Profile Redirects to Homepage  
 
-**Type:** Functional Bug 
+**Type:** Functional Bug  
 **Severity:** Medium  
 **Environment:** Chrome, Windows 10  
 
-### Steps to Reproduce
-1. Prijavi se u aplikaciju  
-2. Otvori svoj profil  
-3. Otvori padajući izbornik
-4. Klikni menu 
+### Steps to Reproduce  
+1. Log in to the application.  
+2. Open your profile.  
+3. Open the dropdown menu.  
+4. Click on “Menu.”  
 
-### Expected Result
-Otvara se menu bez povratka na početnu stranicu.  
+### Expected Result  
+The menu should open without redirecting to the homepage.  
 
-### Actual Result
-Nakon klika menu se otvara i vraća korisnika na početnu stranicu. 
+### Actual Result  
+After clicking, the menu opens but the user is redirected to the homepage.  
 
 ---
 
-## ♦️ Bug #6 – Albumi se na početnoj stranici prikazuju kao pojedinačne slike
+## ♦️ Bug #5 – Albums on Homepage Displayed as Individual Images  
 
 **Type:** Functional / UX Bug  
 **Severity:** Medium  
 **Environment:** Chrome, Windows 10  
 
-### Steps to Reproduce
-1. Otvori početnu stranicu aplikacije  
-2. Pregledaj prikaz albuma koji se nalaze na stranici  
+### Steps to Reproduce  
+1. Open the homepage.  
+2. Observe the displayed albums.  
 
-### Expected Result
-Na početnoj stranici trebali bi se prikazivati samo albumi, svaki s naslovnom slikom i nazivom.  
-Kada korisnik klikne na album, tada se trebaju prikazati pojedinačne slike unutar tog albuma.  
+### Expected Result  
+The homepage should show only **albums**, each with a cover photo and title.  
+Individual images should appear only after entering a specific album.  
 
-### Actual Result
-Na početnoj stranici prikazuju se i naslovna slika albuma i slike unutar albuma kao da su sve zasebne fotografije.  
-Time se gubi struktura albuma i korisnik ne može razlikovati gdje počinje novi album. (screenshots/bug_albumCover_Photos.png)
-
----
-## ♦️ Bug #7 – Broj slika u albumu se ne ažurira odmah nakon brisanja
-
-**Type:** Functional Bug
-**Severity:** Low
-**Environment:** Chrome, Windows 10
-
-### Steps to Reproduce
-1. Otvori album koji sadrži više slika
-2. Obriši jednu sliku iz albuma
-3. Promatraj prikaz broja slika u albumu bez osvježavanja stranice
-
-### Expected Result
-Nakon što korisnik obriše sliku, broj slika prikazan uz album trebao bi se odmah ažurirati i prikazivati točan broj slika.
-
-### Actual Result
-Nakon brisanja slike, broj slika u albumu se ne ažurira odmah.
-Prikazuje se stari broj (npr. 2 slike) sve dok se stranica ručno ne osvježi, nakon čega se prikazuje točan broj (1 slika).
+### Actual Result  
+Both the album cover and its images appear together as individual photos.  
+This causes confusion, as users cannot distinguish between albums. (screenshots/bug_albumCover_Photos.png)  
 
 ---
 
-## ♦️ Bug #8 – Ručno uneseni naziv slike se prepisuje imenom datoteke nakon uploada
+## ♦️ Bug #6 – Album Photo Count Not Updated After Deletion  
 
-**Type:** Functional / UX Bug
-**Severity:** Medium
-**Environment:** Chrome, Windows 10
+**Type:** Functional Bug  
+**Severity:** Low  
+**Environment:** Chrome, Windows 10, Android 14  
 
-### Steps to Reproduce
-1. Otvori formu za dodavanje nove slike u aplikaciji.​
-2. U polje "Photo Name" upiši vlastiti naziv slike (npr. "forest") prije odabira datoteke.​
-3. Odaberi i uploadaj datoteku s računala čiji je naziv drugačiji (npr. "IMG_1234.jpg").​
-4. Promatraj vrijednost polja "Photo Name" nakon završetka uploada.​
+### Steps to Reproduce  
+1. Open an album containing multiple photos.  
+2. Delete one photo.  
+3. Observe the album photo count without refreshing the page.  
 
-### Expected Result
-Ručno uneseni naziv treba ostati nepromijenjen nakon odabira i uploada datoteke, osim ako aplikacija prije uploada eksplicitno upozori da će naziv biti prepisan imenom datoteke.​
+### Expected Result  
+After deletion, the album’s photo count should update immediately to reflect the correct number.  
 
-### Actual Result
-Nakon uploada, vrijednost polja automatski se prepisuje na naziv datoteke s računala (npr. s "forest" na "IMG_1234"), čime se gubi korisnički unos bez jasnog upozorenja ili kontrole.​
-
----
-
-## ♦️ Bug #9 – Početna poruka je preopćenita i neusklađena s tonom proizvoda
-
-**Type:** UI/Content Bug
-**Severity:** Low
-**Environment:** Chrome, Windows 10
-
-### Steps to Reproduce
-1. Otvori početnu stranicu aplikacije.  
-2. Uoči poruku: "We are celebrating the vastness of life."
-
-### Expected Result
-Poruka treba biti gramatički ispravna, jasnija i prirodnija, primjerice:  
-"We celebrate the vastness of life."
-
-### Actual Result
-Trenutna poruka "We are celebrating the vastness of life" zvuči neprirodno i nije u skladu s tonom aplikacije.
+### Actual Result  
+The old count remains visible until the page is manually refreshed.  
 
 ---
 
-## ♦️ Bug #10 - Nije moguće postaviti novu lozinku.
+## ♦️ Bug #7 – Custom Photo Name Overwritten by File Name After Upload  
 
-**Type:** Functional Bug
-**Severity:** High
-**Environment:** Chrome, Windows 10
+**Type:** Functional / UX Bug  
+**Severity:** Medium  
+**Environment:** Chrome, Windows 10, Android 14  
 
-### Steps to Reproduce
-1. Otvori početnu stranicu aplikacije
-2. Odaberi Menu
-3. Klikni na "Login"
-4. Klikni na "Forgot Your Password? Recover Your Password Here!"
-5. Unesi točan email korisničkog računa
-6. Na dobivenom mailu klikni "Set New Password"
-   
-### Expected Result
-Otvara se stranica za unos nove lozinke i omogućuje korisniku da uspješno postavi novu lozinku.
+### Steps to Reproduce  
+1. Open the upload form for adding a new photo.  
+2. Enter a custom name in the “Photo Name” field (e.g., “forest”).  
+3. Select and upload a file with a different filename (e.g., “IMG_1234.jpg”).  
+4. Observe the “Photo Name” field after upload.  
 
-### Actual Result
-Umjesto toga otvara se stranica s porukom "404 Not Found".  
-Resetiranje lozinke nije moguće dovršiti.  (screenshots/bug_newPassword)
+### Expected Result  
+The manually entered name should remain unchanged unless the app explicitly warns the user.  
+
+### Actual Result  
+After upload, the “Photo Name” field is automatically replaced with the file name (“forest” → “IMG_1234”), overwriting user input without confirmation.  
 
 ---
 
-## ♦️ Bug #11 – Social login opcije ne rade 
+## ♦️ Bug #8 – Homepage Header Message Grammatically Incorrect  
+
+**Type:** UI / Content Bug  
+**Severity:** Low  
+**Environment:** Chrome, Windows 10, Android 14  
+
+### Steps to Reproduce  
+1. Open the homepage.  
+2. Observe the hero message: “We are celebrating the vastness of life.”  
+
+### Expected Result  
+The message should be grammatically correct and more natural, e.g.,  
+“We celebrate the vastness of life.”  
+
+### Actual Result  
+The current phrase “We are celebrating the vastness of life” sounds unnatural and inconsistent with the app’s tone.  
+
+---
+
+## ♦️ Bug #9 – “Set New Password” Link Leads to 404 Page  
 
 **Type:** Functional Bug  
 **Severity:** High  
-**Environment:** Chrome, Windows 10  
+**Environment:** Chrome, Windows 10, Android 14  
 
-### Steps to Reproduce
-1. Otvori Login stranicu aplikacije.  
-2. Klikni na bilo koju opciju pod Social login (Facebook, Google, Twitter ili GitHub).  
+### Steps to Reproduce  
+1. Open the homepage.  
+2. Open **Menu** → **Login**.  
+3. Click **Forgot Your Password? Recover Your Password Here!**  
+4. Enter a valid registered email.  
+5. Open the received email and click **Set New Password**.  
 
-### Expected Result
-Otvara se prozor za prijavu putem odabrane društvene mreže.  
-Korisnik se nakon uspješne prijave vraća u aplikaciju kao autentificirani korisnik.  
+### Expected Result  
+A page should open where the user can set a new password successfully.  
 
-### Actual Result
-Umjesto toga prikazuje se poruka:  
-"undefined: Social login configuration not found."  
-Prijava putem društvenih mreža nije moguća.  
+### Actual Result  
+The link opens a **“404 Not Found”** page.  
+Password reset cannot be completed. (screenshots/bug_newPassword.png)  
 
 ---
 
-## ♦️ Bug #12 – Aplikacija prihvaća nevažeće e-mail adrese pri registraciji
+## ♦️ Bug #10 – Social Login Options Not Working  
+
+**Type:** Functional Bug  
+**Severity:** High  
+**Environment:** Chrome, Windows 10, Android 14  
+
+### Steps to Reproduce  
+1. Open the **Login** page.  
+2. Click any option under **Social Login** (Facebook, Google, Twitter, GitHub).  
+
+### Expected Result  
+A login window should appear for the chosen provider (OAuth flow), and the user should be authenticated and redirected back to the app.  
+
+### Actual Result  
+An error message appears:  
+“undefined: Social login configuration not found.”  
+Social login is not functional.  
+
+---
+
+## ♦️ Bug #11 – Invalid Email Format Accepted During Registration  
 
 **Type:** Validation / Functional Bug  
 **Severity:** High  
-**Environment:** Chrome, Windows 10  
+**Environment:** Chrome, Android 14, Windows 10  
 
-### Steps to Reproduce
-1. Otvori stranicu za registraciju.  
-2. Unesi neispravnu e-mail adresu, npr. ""test@gmailc.om".  
-3. Dovrši registraciju.  
-4. Provjeri mogućnost prijave.  
+### Steps to Reproduce  
+1. Open the registration page.  
+2. Enter an invalid email address, e.g., **test@gmailc.om**.  
+3. Complete registration.  
+4. Attempt to log in.  
 
-### Expected Result
-Aplikacija bi trebala prikazati poruku o nevažećoj e-mail adresi i spriječiti registraciju.  
+### Expected Result  
+The system should display an error message indicating the email format is invalid and prevent registration.  
 
-### Actual Result
-Registracija se uspješno izvrši i aplikacija navodno šalje aktivacijski mail na nepostojeću adresu.  
-Korisnik se zatim ne može prijaviti jer nije moguće potvrditi račun.  
+### Actual Result  
+Registration succeeds, and the app claims to send an activation email to the invalid address.  
+The user cannot confirm the account or log in.  
 
 ---
+
+## ♦️ Bug #12 – Dropdown Icon Disappears After Refresh  
+
+**Type:** UI Bug  
+**Severity:** Medium  
+**Environment:** Chrome, Android 14  
+
+### Steps to Reproduce  
+1. Open the homepage.  
+2. Refresh the page.  
+
+### Expected Result  
+The page should reload without visual changes.  
+
+### Actual Result  
+After refresh, the dropdown menu icon disappears, leaving an empty white space. (screenshots/noLogo.png)  
+
 ---
 
+## ♦️ Bug #13 – Dropdown Menu Cannot Be Closed After Opening  
 
-## 💡 Suggestions / Improvements
+**Type:** Functional Bug  
+**Severity:** Medium  
+**Environment:** Chrome, Android 14  
 
-### Suggestion #1 – Omogućiti pretragu po korisnicima
+### Steps to Reproduce  
+1. Open the homepage.  
+2. Click the dropdown menu to open it.  
+3. Click again to close it.  
+
+### Expected Result  
+The dropdown should collapse when clicked again.  
+
+### Actual Result  
+The dropdown remains open and does not respond to clicks. (screenshots/notWorking.png)  
+
+---
+
+## ♦️ Bug #14 – Gallery and Album Preview Not Functional  
+
+**Type:** Functional Bug  
+**Severity:** High  
+**Environment:** Chrome, Android 14  
+
+### Steps to Reproduce  
+1. Open the homepage.  
+2. Click the gallery icon.  
+3. Scroll down.  
+
+### Expected Result  
+The gallery should remain open, allowing the user to browse albums and photos.  
+
+### Actual Result  
+After scrolling, the gallery closes unexpectedly, preventing browsing.  
+
+---
+
+# 💡 Suggestions / Improvements  
+
+---
+
+### Suggestion #1 – Enable User Search  
+
 **Type:** UX Improvement  
 **Priority:** Medium  
 **Environment:** Chrome, Windows 10  
 
-#### Description
-Trenutno je moguće pretraživati samo nazive slika.
+#### Description  
+Currently, it is only possible to search by photo title.  
 
-#### Expected Benefit
+#### Expected Benefit  
+Allowing users to search by author would make it easier to find photos from specific users and improve overall user experience.  
 
-Pretraživanje po korisnicima omogućilo bi lakše pronalaženje slika određenog autora i poboljšalo korisničko iskustvo.
 ---
-### Suggestion #2 – Omogućiti "Drag & Drop" upload slika
+
+### Suggestion #2 – Add “Drag & Drop” Photo Upload  
 
 **Type:** UX Improvement  
 **Priority:** Medium  
 **Environment:** Chrome, Windows 10  
 
-#### Description
-Trenutno se slike mogu dodavati samo putem standardne opcije **"Browse files"**.  
-Predlaže se dodavanje mogućnosti **povlačenja i ispuštanja (drag & drop)** slika unutar područja za upload.  
+#### Description  
+Currently, photos can only be uploaded via the standard **“Browse files”** option.  
+It is recommended to add a **drag & drop** upload feature within the upload area.  
 
-#### Expected Benefit
-Korisnicima bi se omogućilo brže i intuitivnije dodavanje fotografija, što je uobičajeno ponašanje u modernim web aplikacijama.  
-Opcija *drag & drop* trebala bi biti dodatak postojećem načinu učitavanja putem dijaloga za datoteke, a ne zamjena.
+#### Expected Benefit  
+Provides a faster and more intuitive way to upload photos, aligning with modern web app standards.  
+The drag & drop feature should complement, not replace, the existing upload dialog.  
 
 ---
 
-### Suggestion #3 - Unaprijediti upload fotografije 
+### Suggestion #3 – Improve Upload Name Handling  
 
 **Type:** Functional Improvement  
 **Priority:** Medium  
 **Environment:** Chrome, Windows 10  
 
-#### Description
-Trenutno se naziv slika prilikom uploada automatski dodjeli prema nazivu datoteke bez obzira želi li korisnik tu mogućnost.
-Ako je polje "Photo Name" već promijenjeno od strane korisnika, ne prepisivati ga nakon uploada; popunjavati ga imenom datoteke samo kada je prazno ili nepromijenjeno.​
-Dodati toggle "Koristi naziv datoteke" koji kad je uključen sinkronizira naslov s file.name, a kad je isključen zadržava korisnički unos.​
-Jasno validirati i prikazati informativnu poruku ako će aplikacija prepisati naslov, ili primijeniti pravilo da se ime datoteke koristi samo za interni identifikator, dok “Naziv” ostaje korisnički atribut.​
+#### Description  
+Currently, uploaded photos automatically inherit the file name, even if the user entered a custom title beforehand.  
+If the “Photo Name” field is already filled, it should not be overwritten.  
+Optionally, add a toggle “Use File Name” that lets the user choose whether to sync the title with the file name.  
 
-#### Expected Benefit
-Korisnik ne mora ponovno unositi naziv slike ukoliko je prije uploada već to učinio.
+#### Expected Benefit  
+Prevents user input from being overwritten and reduces the need to re-enter photo titles after upload.  
 
 ---
-### Suggestion #4 – Zamijeniti beskonačno skrolanje numeracijom stranica (pagination)
+
+### Suggestion #4 – Replace Infinite Scrolling with Pagination  
 
 **Type:** UX Improvement  
 **Priority:** Medium  
 **Environment:** Chrome, Windows 10  
 
-#### Description
-Trenutno aplikacija koristi beskonačno skrolanje za prikaz slika.  
-Predlaže se uvođenje paginacije, prikaz ograničenog broja slika po stranici (npr. 20), uz mogućnost prelaska na sljedeću / prethodnu stranicu.
+#### Description  
+The gallery currently uses infinite scrolling.  
+Introduce pagination — e.g., display 20 photos per page, with navigation to next/previous pages.  
 
-#### Expected Benefit
-- Lakše snalaženje i povratak na prethodne slike  
-- Brže učitavanje sadržaja  
-- Jasnija struktura galerije i bolja kontrola nad pregledom
+#### Expected Benefit  
+- Easier navigation and return to previous content  
+- Faster loading times  
+- Clearer gallery structure and better control  
 
+---
 
+### Suggestion #5 – Add Autocomplete for Search  
+
+**Type:** UX Improvement  
+**Priority:** Medium  
+**Environment:** Chrome, Android 14, Windows 10  
+
+#### Description  
+Currently, search results appear only after entering the full term and pressing Enter.  
+Implement **autocomplete** so that suggestions appear as the user types (e.g., after two characters).  
+Include a slight delay (e.g., 300–500 ms) to avoid excessive API requests.  
+
+#### Expected Benefit  
+- Faster and more intuitive searching  
+- Fewer typing errors  
+- Improved user experience  
+
+---
+
+### Suggestion #6 – Remove Unnecessary Gallery Access Step  
+
+**Type:** UX Improvement  
+**Priority:** Low  
+**Environment:** Chrome, Windows 10  
+
+#### Description  
+The gallery requires an additional click to open before scrolling, instead of being visible immediately.  
+
+#### Expected Benefit  
+Simplifies navigation by allowing users to scroll directly to the gallery without an extra step.  
