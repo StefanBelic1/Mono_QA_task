@@ -1,6 +1,6 @@
 # 🐞 BUG REPORT – Photo Gallery 
 
-## Bug #1 – Nejasna ikona padajućeg izbornika
+## ♦️ Bug #1 – Nejasna ikona padajućeg izbornika
 **Type:** UI Bug
 **Severity:** Low  
 **Environment:** Chrome, Windows 10  
@@ -17,7 +17,7 @@ Gumb padajućeg izbornika nije jasan, izgleda kao da predstavlja način biranja 
 
 ---
 
-## Bug #2 – Nepotreban dodatni korak za pregled galerija
+## ♦️ Bug #2 – Nepotreban dodatni korak za pregled galerija
 **Type:** UX Bug
 **Severity:** Low
 **Environment:** Chrome, Windows 10  
@@ -158,7 +158,7 @@ Nakon uploada, vrijednost polja automatski se prepisuje na naziv datoteke s rač
 
 ### Steps to Reproduce
 1. Otvori početnu stranicu aplikacije.  
-2. Uoči hero poruku: "We are celebrating the vastness of life."
+2. Uoči poruku: "We are celebrating the vastness of life."
 
 ### Expected Result
 Poruka treba biti gramatički ispravna, jasnija i prirodnija, primjerice:  
@@ -166,6 +166,71 @@ Poruka treba biti gramatički ispravna, jasnija i prirodnija, primjerice:
 
 ### Actual Result
 Trenutna poruka "We are celebrating the vastness of life" zvuči neprirodno i nije u skladu s tonom aplikacije.
+
+---
+
+## Bug #10 - Nije moguće postaviti novu lozinku.
+
+**Type:** Functional Bug
+**Severity:** High
+**Environment:** Chrome, Windows 10
+
+### Steps to Reproduce
+1. Otvori početnu stranicu aplikacije
+2. Odaberi Menu
+3. Klikni na "Login"
+4. Klikni na "Forgot Your Password? Recover Your Password Here!"
+5. Unesi točan email korisničkog računa
+6. Na dobivenom mailu klikni "Set New Password"
+   
+### Expected Result
+Otvara se stranica za unos nove lozinke i omogućuje korisniku da uspješno postavi novu lozinku.
+
+### Actual Result
+Umjesto toga otvara se stranica s porukom "404 Not Found".  
+Resetiranje lozinke nije moguće dovršiti.  (screenshots/bug_newPassword)
+
+---
+
+## Bug #11 – Social login opcije ne rade 
+
+**Type:** Functional Bug  
+**Severity:** High  
+**Environment:** Chrome, Windows 10  
+
+### Steps to Reproduce
+1. Otvori Login stranicu aplikacije.  
+2. Klikni na bilo koju opciju pod Social login (Facebook, Google, Twitter ili GitHub).  
+
+### Expected Result
+Otvara se prozor za prijavu putem odabrane društvene mreže.  
+Korisnik se nakon uspješne prijave vraća u aplikaciju kao autentificirani korisnik.  
+
+### Actual Result
+Umjesto toga prikazuje se poruka:  
+"undefined: Social login configuration not found."  
+Prijava putem društvenih mreža nije moguća.  
+
+---
+
+## Bug #12 – Aplikacija prihvaća nevažeće e-mail adrese pri registraciji
+
+**Type:** Validation / Functional Bug  
+**Severity:** High  
+**Environment:** Chrome, Windows 10  
+
+### Steps to Reproduce
+1. Otvori stranicu za registraciju.  
+2. Unesi neispravnu e-mail adresu, npr. ""test@gmailc.om".  
+3. Dovrši registraciju.  
+4. Provjeri mogućnost prijave.  
+
+### Expected Result
+Aplikacija bi trebala prikazati poruku o nevažećoj e-mail adresi i spriječiti registraciju.  
+
+### Actual Result
+Registracija se uspješno izvrši i aplikacija navodno šalje aktivacijski mail na nepostojeću adresu.  
+Korisnik se zatim ne može prijaviti jer nije moguće potvrditi račun.  
 
 ---
 ---
