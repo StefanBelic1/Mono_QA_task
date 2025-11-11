@@ -233,7 +233,7 @@ The user cannot confirm the account or log in.
 The page should reload without visual changes.  
 
 ### Actual Result  
-After refresh, the dropdown menu icon disappears, leaving an empty white space. (screenshots/noLogo.png)  
+After refresh, the dropdown menu icon disappears, leaving an empty white space. (screenshots/noLogo.jpeg)  
 
 ---
 
@@ -252,7 +252,7 @@ After refresh, the dropdown menu icon disappears, leaving an empty white space. 
 The dropdown should collapse when clicked again.  
 
 ### Actual Result  
-The dropdown remains open and does not respond to clicks. (screenshots/notWorking.png)  
+The dropdown remains open and does not respond to clicks. (screenshots/notWorking.jpeg)  
 
 ---
 
