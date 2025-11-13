@@ -97,7 +97,7 @@ npm -v
 git clone https://github.com/StefanBelic1/Mono_QA_zadatak.git
 cd Mono_QA_zadatak
 ### 3️⃣ Install Dependencies
-npm install
+ npm install
 - This will install Cypress and cypress-file-upload.
 
 ### 4️⃣ Run Cypress Tests
