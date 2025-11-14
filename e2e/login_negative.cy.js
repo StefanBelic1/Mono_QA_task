@@ -1,6 +1,6 @@
 describe('Login functionality', () => {
 
-  it('should successfully log in with valid credentials', () => {
+  it('should not log in with valid credentials', () => {
     
     cy.visit('https://demo.baasic.com/angular/starterkit-photo-gallery/login');
     cy.get('input[name="username"]').type('stefanbelic');
@@ -9,5 +9,6 @@ describe('Login functionality', () => {
     cy.contains('Invalid email, username or password', { timeout: 10000 }).should('be.visible');
     cy.contains('Forgot Your Password? Recover Your Password Here!', { timeout: 10000 }).should('be.visible');
 });
+
 
 });
