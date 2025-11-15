@@ -24,7 +24,6 @@ It allows users to:
 | Create Gallery | User can create a new gallery | **HIGH** | Core functionality of the app |
 | Delete Gallery | User can delete a gallery | **HIGH** | Very important for user experience |
 | Open Album | User can open an existing album and view its content | **MEDIUM** | Important for verifying navigation and data loading |
-| Open Photo | User can open a single photo from an album | **MEDIUM** | Ensures that individual media items can be displayed correctly |
 | Logout | User logs out successfully | **HIGH** | Important for security |
 
 
