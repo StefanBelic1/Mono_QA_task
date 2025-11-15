@@ -57,6 +57,7 @@ Mono_QA_task/
 └─ README.md
 
 
+
 ---
 
 ## 🧩 What Is Covered
