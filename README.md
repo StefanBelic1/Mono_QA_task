@@ -32,33 +32,6 @@ Automated tests are located in the `e2e/` folder.
 
 ---
 
-## 🗂️ Project Structure
-
-Mono_QA_task/
-│
-├─ e2e/
-│  ├─ create_gallery.cy.js
-│  ├─ delete_gallery.cy.js
-│  ├─ login_negative.cy.js
-│  ├─ login_positive.cy.js
-│  ├─ logout.cy.js
-│  ├─ open_album.cy.js
-│  └─ open_photo.cy.js
-│
-├─ fixtures/
-│  ├─ forest.jpg
-│  ├─ istockphoto-1550071750-612x612.jpg
-│  └─ pexels-helenalopes-1388069.jpg
-│
-├─ screenshots/
-│
-├─ BUG_REPORT.md
-├─ TEST_PLAN.md
-└─ README.md
-
-
-
----
 
 ## 🧩 What Is Covered
 
@@ -118,12 +91,12 @@ npx cypress open
 - Pick any test file under /e2e/ to run
 
 ⚡ Option 2: Run in Headless Mode
-npx cypress run
+- npx cypress run
 or run a specific test:
-npx cypress run --spec "cypress/e2e/login.cy.js"
+- npx cypress run --spec "cypress/e2e/login.cy.js"
 🧠 Notes for Reviewers
-All test images used in upload tests are located inside the fixtures/ folder
-(Cypress automatically loads files from there).
+- All test images used in upload tests are located inside the fixtures/ folder
+  (Cypress automatically loads files from there).
 
 ---
 Valid login credentials:
