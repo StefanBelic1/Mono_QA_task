@@ -39,7 +39,7 @@ The copyright text should include the correct name and link to the relevant webs
 
 ---
 
-## ♦️ Bug #3 – Opening Image from User Album Leads to 404 Page  
+## ♦️ Bug #3 –  Opening Detailed View for First Image from User Album Leads to 404 Page  
 
 **Type:** Functional Bug  
 **Severity:** High  
@@ -48,7 +48,7 @@ The copyright text should include the correct name and link to the relevant webs
 ### Steps to Reproduce  
 1. Log in to the application (https://demo.baasic.com/angular/starterkit-photo-gallery/login).  
 2. Open My Album (e.g., "TestAlbum").  
-3. Click on any image within your album.  
+3. Click on first image within your album.  
 
 ### Expected Result  
 The selected image should open in a detailed view.  
